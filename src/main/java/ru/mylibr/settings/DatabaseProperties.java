@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan
-@PropertySource("classpath:application.properties")
+@PropertySource("classpath:database.properties")
 @Getter
 @Setter
 @SpringBootApplication
