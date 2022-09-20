@@ -30,15 +30,15 @@ public class ReaderResp {
     public void setAddres (String addres) {
         this.addres = addres;
     }
-    private int phone_number;
-    public int getPhoneNumber() {
+    private long phone_number;
+    public long getPhoneNumber() {
         return phone_number;
     }
-    public void setPhoneNumber(int phone_number) {
+    public void setPhoneNumber(long phone_number) {
         this.phone_number = phone_number;
     }
 
-    public ReaderResp(int id_reader, String full_name, String addres, int phone_number ) {
+    public ReaderResp(int id_reader, String full_name, String addres, long phone_number ) {
         super();
         this.id_reader = id_reader;
         this.full_name = full_name;

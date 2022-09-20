@@ -16,7 +16,7 @@ public class Reader {
     @JsonProperty
     private String addres;
     @JsonProperty
-    private double phone_number;
+    private long phone_number;
 
     @Override
     public String toString() {

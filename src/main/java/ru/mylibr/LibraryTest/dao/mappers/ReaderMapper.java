@@ -10,9 +10,10 @@ import java.util.List;
 @Component
 @Mapper
 public interface ReaderMapper {
+
     @Insert("call savereader(i_full_name            => #{in.full_name, mode=IN, jdbcType=VARCHAR, javaType=String},\n" +
             "                i_addres               => #{in.addres, mode=IN, jdbcType=VARCHAR, javaType=String},\n" +
-            "                i_phone_number         => #{in.phone_number, mode=IN, jdbcType=BIGINT, javaType=int})")
+            "                i_phone_number         => #{in.phone_number, mode=IN, jdbcType=BIGINT, javaType=long})")
 
     @Options(statementType = StatementType.CALLABLE)
     void saveReaderParams  (@Param("in") Reader reader);
@@ -22,7 +23,7 @@ public interface ReaderMapper {
     @Update("call updatereader(i_id_reader            => #{in.id_reader, mode=IN, jdbcType=BIGINT, javaType=int},\n" +
             "                  i_full_name            => #{in.full_name, mode=IN, jdbcType=VARCHAR, javaType=String},\n" +
             "                  i_addres               => #{in.addres, mode=IN, jdbcType=VARCHAR, javaType=String},\n" +
-            "                  i_phone_number         => #{in.phone_number, mode=IN, jdbcType=BIGINT, javaType=int})")
+            "                  i_phone_number         => #{in.phone_number, mode=IN, jdbcType=BIGINT, javaType=long})")
     @Options(statementType = StatementType.CALLABLE)
     void updateReaderParams(@Param("in") Reader reader);
     @Select("select * from selreader()")
