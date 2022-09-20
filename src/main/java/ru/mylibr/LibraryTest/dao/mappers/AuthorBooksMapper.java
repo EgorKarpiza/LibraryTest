@@ -23,6 +23,7 @@ public interface AuthorBooksMapper{
             "                       i_id_author          => #{in.id_author, mode=IN, jdbcType=BIGINT, javaType=int},\n" +
             "                       i_id_book            => #{in.id_book, mode=IN, jdbcType=BIGINT, javaType=int})")
     @Options(statementType = StatementType.CALLABLE)
+
     void updateAuthorBooksParams(@Param("in") AuthorBooks authorBooks);
     @Select("select * from selauthorbooks()")
     @Results({

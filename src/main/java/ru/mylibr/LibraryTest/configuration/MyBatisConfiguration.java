@@ -18,6 +18,8 @@ import javax.sql.DataSource;
 @ComponentScan("ru.mylibr.LibraryTest.dao")
 @MapperScan("ru.mylibr.LibraryTest.dao")
 @EnableTransactionManagement
+
+    // Связывает проект с базой данных
 public class MyBatisConfiguration {
 
     private final DatabaseProperties databaseProperties;

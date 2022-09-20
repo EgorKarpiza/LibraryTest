@@ -16,6 +16,7 @@ public interface ReaderMapper {
             "                i_phone_number         => #{in.phone_number, mode=IN, jdbcType=BIGINT, javaType=long})")
 
     @Options(statementType = StatementType.CALLABLE)
+
     void saveReaderParams  (@Param("in") Reader reader);
     @Delete("call delreader( i_id_reader         => #{i_id_reader, mode=IN, jdbcType=BIGINT, javaType=int})")
     @Options(statementType = StatementType.CALLABLE)

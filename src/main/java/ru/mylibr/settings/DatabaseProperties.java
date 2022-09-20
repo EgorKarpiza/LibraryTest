@@ -16,6 +16,7 @@ import org.springframework.context.annotation.PropertySource;
 @SpringBootApplication
 public class DatabaseProperties {
 
+    // Подключение к базе данных через параметры из database.properties
     @Value("${ru.mylibr.db.driver}")
     private String driver;
 
