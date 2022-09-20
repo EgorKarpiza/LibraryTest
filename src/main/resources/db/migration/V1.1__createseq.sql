@@ -1,0 +1,61 @@
+CREATE SEQUENCE IF NOT EXISTS public.seq_aut
+    INCREMENT 1
+    START 0
+    MINVALUE 0
+    MAXVALUE 9223372036854775807
+    CACHE 1
+    OWNED BY author.id_author;
+ALTER SEQUENCE public.seq_aut
+    OWNER TO postgres;
+
+
+
+CREATE SEQUENCE IF NOT EXISTS public.seq_book
+    INCREMENT 1
+    START 0
+    MINVALUE 0
+    MAXVALUE 9223372036854775807
+    CACHE 1
+    OWNED BY book.id_book;
+ALTER SEQUENCE public.seq_book
+    OWNER TO postgres;
+
+
+
+CREATE SEQUENCE IF NOT EXISTS public.seq_aut_book
+    INCREMENT 1
+    START 1
+    MINVALUE 0
+    MAXVALUE 9223372036854775807
+    CACHE 1;
+ALTER SEQUENCE public.seq_aut_book
+    OWNER TO postgres;
+
+
+
+CREATE SEQUENCE IF NOT EXISTS public.seq_read
+    INCREMENT 1
+    START 0
+    MINVALUE 0
+    MAXVALUE 9223372036854775807
+    CACHE 1;
+ALTER SEQUENCE public.seq_read
+    OWNER TO postgres;
+
+
+
+CREATE SEQUENCE IF NOT EXISTS public.seq_lib_card
+    INCREMENT 1
+    START 1
+    MINVALUE 0
+    MAXVALUE 9223372036854775807
+    CACHE 1;
+ALTER SEQUENCE public.seq_lib_card
+    OWNER TO postgres;
+
+
+
+
+
+
+
