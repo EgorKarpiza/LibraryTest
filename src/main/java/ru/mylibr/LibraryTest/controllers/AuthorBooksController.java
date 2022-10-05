@@ -34,7 +34,7 @@ public class AuthorBooksController {
     public void updateauthorbooks(@RequestBody AuthorBooks authorBooks){
         authorBooksService.updateAuthorBooks(authorBooks);
     }
-    @PostMapping("/selauthorbooks")
+    @GetMapping("/selauthorbooks")
     public List<AuthorBooks> selauthorbooks(){
         return authorBooksService.selAuthorBooks();
     }

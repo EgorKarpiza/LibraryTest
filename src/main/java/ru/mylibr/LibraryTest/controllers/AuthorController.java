@@ -32,7 +32,7 @@ import java.util.List;
         public void updateauthor(@RequestBody Author author){
         authorService.updateAuthor(author);
         }
-        @PostMapping("/selauthor")
+        @GetMapping("/selauthor")
             public List<Author> selauthor(){
             return authorService.selAuthor();
         }

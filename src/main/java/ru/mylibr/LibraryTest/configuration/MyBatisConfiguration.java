@@ -35,12 +35,10 @@ public class MyBatisConfiguration {
         factoryBean.setDataSource(springDataSource());
         return factoryBean.getObject();
     }
-
     @Bean
     public DataSourceTransactionManager dataSourceTransactionManager() {
         return new DataSourceTransactionManager(springDataSource());
     }
-
     @Bean
     public DataSource springDataSource() {
         BasicDataSource ds = new BasicDataSource();

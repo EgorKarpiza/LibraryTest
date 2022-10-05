@@ -32,7 +32,7 @@ public class BookController {
     public void updatebook(@RequestBody Book book) {
         bookService.updateBook(book);
     }
-    @PostMapping("/selbook")
+    @GetMapping("/selbook")
     public List<Book> selbook(){
         return bookService.selBook();
     }

@@ -32,7 +32,7 @@ public class ReaderController {
     public void updatereader(@RequestBody Reader reader){
         readerService.updateReader(reader);
     }
-    @PostMapping("/selreader")
+    @GetMapping("/selreader")
     public List<Reader> selreader(){
         return readerService.selReader();
     }

@@ -32,7 +32,7 @@ public class LibraryCardController {
     public void updatelibrarycard(@RequestBody LibraryCard libraryCard){
         libraryCardService.updateLibraryCard(libraryCard);
     }
-    @PostMapping("/sellibrarycard")
+    @GetMapping("/sellibrarycard")
     public List<LibraryCard> sellibrarycard(){
         return libraryCardService.selLibraryCard();
     }
